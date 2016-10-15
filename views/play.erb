@@ -1,6 +1,4 @@
-<div style="border: 2px dashed red">
-  <img src="http://tinyurl.com/3sqwntc">
-
+<body>
   <h1>Battle</h1>
 
     <% if @game.player_1_hp == 0 %>
@@ -11,9 +9,63 @@
       <h2> <%= @game.player_2_name %> loses the battle! </h2>
     <% end %>
 
+  <div class="right">
+    <img src = "https://66.media.tumblr.com/cc01cc1bf4dcdac8a03c1385efa306ac/tumblr_nshl4nDmzN1u5yc4qo1_500.gif">
     <h3><%=@game.player_1_name%> has <%=@game.player_1_hp%> points!</h3>
+  </div>
+  <div class = 'left'>
     <h3><%=@game.player_2_name%> has <%=@game.player_2_hp%> points!</h3>
+  </div>
 
+<div class='centre'>
   <form action="/attack">
     <input type="submit" value="ATTACK!">
   </form>
+</div>
+</body>
+
+
+
+<style>
+body {
+  background-image: url("https://twistedsifter.files.wordpress.com/2013/05/animated-gifs-of-fighting-game-backgrounds-25.gif?w=800&h=336");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+h1 {
+  color: #6866b7;
+  text-align: center;
+  font-size: 100px;
+}
+
+.centre {
+  margin: auto;
+  width: 10%;
+}
+
+.right {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  padding: 10px;
+  color: #f442cb;
+  font-size: 30px;
+}
+
+img {
+  position: absolute;
+  right: 5px;
+  top: 50px;
+}
+
+.left {
+  position: absolute;
+  left: 0px;
+  width: 300px;
+  padding: 10px;
+  color: #f442cb;
+  font-size: 30px;
+}
+</style>
